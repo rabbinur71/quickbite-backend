@@ -6,16 +6,12 @@ const app = express();
 
 // ✅ CORS Configuration
 // In production, only allow your frontend domains.
-// ⚠️ YOU MUST SET THESE IN RENDER ENVIRONMENT VARIABLES OR HARD-CODE THEM BELOW.
-// Option 1 (Recommended): Use environment variable for allowed origins (see note below).
-// Option 2: Hard-code your frontend URLs (used here for clarity).
-
 const corsOptions = {
   origin:
     process.env.NODE_ENV === "production"
       ? [
-          "https://quickbite-frontend.onrender.com", // ← Replace with your actual Render frontend URL
-          // 'https://www.yourcustomdomain.com',     // ← Uncomment & add if you have a custom domain
+          "https://quickbite-frontend-xk4f.onrender.com", // Render frontend URL
+          // Add custom domains here if needed
         ]
       : [
           "http://localhost:3000", // React default
